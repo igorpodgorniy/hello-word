@@ -1,16 +1,16 @@
 const firstRow = 'мама мыла раму';
 const secondRow = 'собака друг человека';
 
+function amountA(array) {
+	let aInArray = 0;
+	for (let i = 0; i < array.length; i++) {
+		if (array.charAt(i) === 'а') aInArray++;
+	}
+	return aInArray;
+}
+
 function getRow(firstRow, secondRow) {
-	let aInFirstRow = 0;
-	let aInSecondRow = 0;
-	for (let i = 0; i < firstRow.length; i++) {
-		if (firstRow.charAt(i) == 'а') aInFirstRow++;
-	}
-	for (let j = 0; j < secondRow.length; j++) {
-		if (secondRow.charAt(j) == 'а') aInSecondRow++;
-	}
-	if (aInFirstRow > aInSecondRow) return firstRow;
+	if (amountA(firstRow) > amountA(secondRow)) return firstRow;
 	else return secondRow;
 }
 
