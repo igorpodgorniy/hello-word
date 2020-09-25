@@ -20,9 +20,9 @@ function formattedPhone(phone) {
 	let newPhone = "";
 	for (let i = 0; i < phone.length; i++) {
 		newPhone += phone.charAt(i);
-		if (i == 1) newPhone += " (";
-		else if (i == 4) newPhone += ") ";
-		else if (i == 7 || i == 9) newPhone += "-";
+		if (i === 1) newPhone += " (";
+		else if (i === 4) newPhone += ") ";
+		else if (i === 7 || i === 9) newPhone += "-";
 	}
 	return newPhone;
 }
